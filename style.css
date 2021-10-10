@@ -258,12 +258,12 @@ input {
 	align-items: center;
 }
 
-.r1_item.i-1 {
+.r1_item.i-1 { /* Dog */
 	grid-column: col;
 	grid-row: row;
 }
 
-.r1_item.i-2 {
+.r1_item.i-2 { /* Cat */
 	grid-column: col 2;
 	grid-row: row;
 }
@@ -286,24 +286,90 @@ input {
     padding:9%;
 }
 
-.r2_item.i-1 {
+.r2_item.i-1 { /* Box 1 */
 	grid-column: col;
 	grid-row: row;
 }
 
-.r2_item.i-2 {
+.r2_item.i-2 { /* Box 2 */
 	grid-column: col 2;
 	grid-row: row;
 }
 
-.r2_item.i-3 {
+.r2_item.i-3 { /* Box 3 */
 	grid-column: col 3;
 	grid-row: row;
 }
 
-.r2_item.i-4 {
+.r2_item.i-4 { /* Box 4 */
 	grid-column: col 4;
 	grid-row: row;
+}
+
+/* Row2 Item Grid */
+
+.r2itemgrid {
+	display: grid;
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	grid-template-columns: [col]4fr [col]1fr [col]1fr;
+	grid-template-rows: [row]1fr [row]1fr [row]1fr;
+}
+
+.r2ig_item {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.r2ig_item.i-1 { /* Image */
+	grid-column: col 2/ span 2;
+	grid-row: row/ span 2;
+	align-items: flex-end;
+	justify-content: flex-start;
+	padding-top: 8px;
+}
+
+.r2ig_item.i-2 { /* Name */
+	grid-column: col;
+	grid-row: row;
+	align-items: flex-end;
+	justify-content: flex-start;
+	font-weight: bold;
+	padding-left: 3px;
+	font-size: 22px;
+}
+
+.r2ig_item.i-3 { /* Stars */
+	grid-column: col 1;
+	grid-row: row 2;
+	align-items: center;
+	justify-content: flex-start;
+	padding-bottom: 5px;
+}
+
+.r2ig_item.i-4 { /* Price */
+	grid-column: col 1;
+	grid-row: row 3;
+	align-items: center;
+	justify-content: flex-start;
+	font-weight: bold;
+	padding-left: 3px;
+	font-size: 16px;
+
+}
+
+.r2ig_item.i-5 { /* Add to Fav  */
+	grid-column: col 2 ;
+	grid-row: row 3;
+	align-items: center;
+}
+
+.r2ig_item.i-6 { /* Add to Cart */
+	grid-column: col 3;
+	grid-row: row 3;
+	align-items: center;
 }
 
 /* Row3 Grid */
