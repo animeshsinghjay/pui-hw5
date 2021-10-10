@@ -13,7 +13,7 @@
 	margin: 0;
 	padding: 0;
 	font-family: "Nunito" , Arial, Helvetica, sans-serif;
-	overflow: auto;
+	overflow: hidden;
 }
 
 html,
@@ -35,12 +35,25 @@ header {
 	border-bottom: 4px solid var(--border-color);
 }
 
+a:link, a:visited {
+	color: var(--border-color);
+	text-decoration: none;
+}
+
+input {
+	height: 100%;
+	width: 100%;
+	font-size: 18px;
+	border: 0px;
+}
+
 .container {
 	height: calc(100% - var(--header-height));
 	width: 80%;
 	background-color: var(--background-color);
 	margin: auto;
 	margin-top: var(--header-height);
+	overflow: auto;
 }
 
 .row {
@@ -175,7 +188,7 @@ header {
     padding:5px;
 }
 
-.hg_item.i-1 {
+.hg_item.i-1 { /* Muddy Paws Logo */
 	grid-column: col;
 	grid-row: row 2;
 	color: #F5F5F5;
@@ -183,14 +196,14 @@ header {
     justify-content: center;
 }
 
-.hg_item.i-2 {
+.hg_item.i-2 { /* Search Bar */
 	grid-column: col 2;
 	grid-row: row 2;
 	background-color: #F5F5F5;
     justify-content: flex-end;
 }
 
-.hg_item.i-3 {
+.hg_item.i-3 { /* Login */
 	grid-column: col 3;
 	grid-row: row 2;
 	background-color: #99CCFF;
@@ -198,9 +211,10 @@ header {
     font-weight: bold;
     font-size: 20px;
     padding-left: 15%;
+	overflow: hidden;
 }
 
-.hg_item.i-4 {
+.hg_item.i-4 { /* Cart */
 	grid-column: col 4;
 	grid-row: row 2;
     background-color: #FFCC00;
@@ -208,6 +222,7 @@ header {
     font-weight: bold;
     font-size: 20px;
     padding-left: 15%;
+	overflow: hidden;
 }
 
 /* Row1 Grid */
@@ -355,6 +370,73 @@ header {
 .r3_item.i-10 { /* Box 5 */
 	grid-column: col 10;
 	grid-row: row 2;
+}
+
+/* Row3 Item Grid */
+
+.r3itemgrid {
+	display: grid;
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	grid-template-columns: [col]1fr [col]1fr;
+	grid-template-rows: [row]5fr [row]2fr [row]1fr [row]2fr [row]2fr;
+}
+
+.r3ig_item {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.r3ig_item.i-1 { /* Image */
+	grid-column: col / span 2;
+	grid-row: row;
+	align-items: flex-end;
+	padding-top: 8px;
+}
+
+.r3ig_item.i-2 { /* Name */
+	grid-column: col / span 2;
+	grid-row: row 2;
+	align-items: flex-end;
+	justify-content: flex-start;
+	padding-left: 10px;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.r3ig_item.i-3 { /* Stars */
+	grid-column: col / span 2;
+	grid-row: row 3;
+	align-items: center;
+	justify-content: flex-start;
+	padding-left: 9px;
+	padding-bottom: 5px;
+}
+
+.r3ig_item.i-4 { /* Price */
+	grid-column: col / span 2;
+	grid-row: row 4;
+	align-items: center;
+	justify-content: flex-start;
+	padding-left: 10px;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+.r3ig_item.i-5 { /* Add to Fav  */
+	grid-column: col 1 ;
+	grid-row: row 5;
+	align-items: center;
+	background-color: #FF99CC;
+}
+
+.r3ig_item.i-6 { /* Add to Cart */
+	grid-column: col 2;
+	grid-row: row 5;
+	align-items: center;
+	background-color: #FFCC00;
 }
 
 /* Row4 Grid */
